@@ -1,34 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   swap_s.c                                           :+:      :+:    :+:   */
+/*   check_sort_round.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sbearded <sbearded@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/29 17:26:20 by sbearded          #+#    #+#             */
-/*   Updated: 2019/10/30 02:01:02 by sbearded         ###   ########.fr       */
+/*   Created: 2019/10/29 22:07:35 by sbearded          #+#    #+#             */
+/*   Updated: 2019/10/29 22:23:45 by sbearded         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "rules.h"
+#include "push_swap.h"
 
-int		rule_sa(t_stack *a, int print)
+int		check_sort_round(t_sort *sort)
 {
-	if (print)
-		ft_putstr("sa\n");
-	return (stack_swap(a));
-}
+	int				*arr;
+	unsigned int	i;
 
-int		rule_sb(t_stack *b, int print)
-{
-	if (print)
-		ft_putstr("sb\n");
-	return (stack_swap(b));
-}
-
-int		rule_ss(t_stack *a, t_stack *b, int print)
-{
-	if (print)
-		ft_putstr("ss\n");
-	return (stack_swap(a) & stack_swap(b));
+	arr = sort->a->arr;
+	i = sort->a->size;
+	while (--i > 1)
+	{
+		if (arr[i] > arr[i - 1] && arr[i - 1] != sort->min
+											&& arr[i] != sort->max)
+			return (0);
+	}
+	return (1);
 }

@@ -6,7 +6,7 @@
 /*   By: sbearded <sbearded@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/29 15:50:02 by sbearded          #+#    #+#             */
-/*   Updated: 2019/10/29 18:47:06 by sbearded         ###   ########.fr       */
+/*   Updated: 2019/10/30 02:03:22 by sbearded         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,27 +17,27 @@ int		rule_handler(const char *command, t_stack *a, t_stack *b)
 	if (a == NULL || a->arr == NULL || b == NULL || b->arr == NULL)
 		return (0);
 	if (ft_strcmp(command, "sa") == 0)
-		return (rule_sa(a));
+		return (rule_sa(a, 0));
 	else if (ft_strcmp(command, "sb") == 0)
-		return (rule_sa(b));
+		return (rule_sa(b, 0));
 	else if (ft_strcmp(command, "ss") == 0)
-		return (rule_ss(a, b));
+		return (rule_ss(a, b, 0));
 	else if (ft_strcmp(command, "pa") == 0)
-		return (rule_pa(a, b));
+		return (rule_pa(a, b, 0));
 	else if (ft_strcmp(command, "pb") == 0)
-		return (rule_pb(a, b));
+		return (rule_pb(a, b, 0));
 	else if (ft_strcmp(command, "ra") == 0)
-		return (rule_ra(a));
+		return (rule_ra(a, 0));
 	else if (ft_strcmp(command, "rb") == 0)
-		return (rule_rb(b));
+		return (rule_rb(b, 0));
 	else if (ft_strcmp(command, "rr") == 0)
-		return (rule_rr(a, b));
+		return (rule_rr(a, b, 0));
 	else if (ft_strcmp(command, "rra") == 0)
-		return (rule_rra(a));
+		return (rule_rra(a, 0));
 	else if (ft_strcmp(command, "rrb") == 0)
-		return (rule_rrb(b));
+		return (rule_rrb(b, 0));
 	else if (ft_strcmp(command, "rrr") == 0)
-		return (rule_rrr(a, b));
+		return (rule_rrr(a, b, 0));
 	return (0);
 }
 
@@ -64,7 +64,7 @@ int		main(int argc, char **argv)
 	t_stack	*b;
 
 	if (argc == 1)
-		exit(0);
+		return (1);
 	if (fill_stack(argc, argv, &a, &b) == 0
 		|| read_input(a, b) == 0)
 	{

@@ -6,7 +6,7 @@
 /*   By: sbearded <sbearded@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/29 16:48:28 by sbearded          #+#    #+#             */
-/*   Updated: 2019/10/29 18:46:35 by sbearded         ###   ########.fr       */
+/*   Updated: 2019/10/29 22:52:59 by sbearded         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include "libft.h"
 
-# define STACK_STEP 1
+# define STACK_STEP 5
 # if STACK_STEP < 1
 #  error STACK_STEP must be >= 1
 # endif

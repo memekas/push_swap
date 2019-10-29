@@ -6,7 +6,7 @@
 /*   By: sbearded <sbearded@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/29 17:24:17 by sbearded          #+#    #+#             */
-/*   Updated: 2019/10/29 18:46:29 by sbearded         ###   ########.fr       */
+/*   Updated: 2019/10/30 02:10:02 by sbearded         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,16 +33,16 @@
 # define RRB(debug_lvl) {rule_rrb(b); DEBUG_PRINT(debug_lvl, "rrb");}
 # define RRR(debug_lvl) {rule_rrr(a, b); DEBUG_PRINT(debug_lvl, "rrr");}
 
-int		rule_sa(t_stack *a);
-int		rule_sb(t_stack *b);
-int		rule_ss(t_stack *a, t_stack *b);
-int		rule_pa(t_stack *a, t_stack *b);
-int		rule_pb(t_stack *a, t_stack *b);
-int		rule_ra(t_stack *a);
-int		rule_rb(t_stack *b);
-int		rule_rr(t_stack *a, t_stack *b);
-int		rule_rra(t_stack *a);
-int		rule_rrb(t_stack *b);
-int		rule_rrr(t_stack *a, t_stack *b);
+int		rule_sa(t_stack *a, int print);
+int		rule_sb(t_stack *b, int print);
+int		rule_ss(t_stack *a, t_stack *b, int print);
+int		rule_pa(t_stack *a, t_stack *b, int print);
+int		rule_pb(t_stack *a, t_stack *b, int print);
+int		rule_ra(t_stack *a, int print);
+int		rule_rb(t_stack *b, int print);
+int		rule_rr(t_stack *a, t_stack *b, int print);
+int		rule_rra(t_stack *a, int print);
+int		rule_rrb(t_stack *b, int print);
+int		rule_rrr(t_stack *a, t_stack *b, int print);
 
 #endif

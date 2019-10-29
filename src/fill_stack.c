@@ -6,7 +6,7 @@
 /*   By: sbearded <sbearded@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/29 17:03:53 by sbearded          #+#    #+#             */
-/*   Updated: 2019/10/29 18:47:28 by sbearded         ###   ########.fr       */
+/*   Updated: 2019/10/29 21:23:58 by sbearded         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,7 @@ int			fill_stack(int argc, char **argv, t_stack **a, t_stack **b)
 	int		num;
 	char	**str;
 	char	**tmp;
+	int		count;
 
 	*a = stack_init();
 	*b = stack_init();
@@ -54,15 +55,15 @@ int			fill_stack(int argc, char **argv, t_stack **a, t_stack **b)
 	{
 		str = ft_strsplit(argv[argc], ' ');
 		tmp = str;
-		while (str && *str)
+		count = ft_2d_count(str);
+		while (--count >= 0)
 		{
-			if (!check_int(*str, &num) || !check_dup(*a, num))
+			if (!check_int(str[count], &num) || !check_dup(*a, num))
 			{
 				ft_2d_del(&tmp);
 				return (0);
 			}
 			stack_put(*a, num);
-			str++;
 		}
 		ft_2d_del(&tmp);
 	}

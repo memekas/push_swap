@@ -1,34 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   swap_s.c                                           :+:      :+:    :+:   */
+/*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sbearded <sbearded@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/29 17:26:20 by sbearded          #+#    #+#             */
-/*   Updated: 2019/10/30 02:01:02 by sbearded         ###   ########.fr       */
+/*   Created: 2019/10/29 19:17:45 by sbearded          #+#    #+#             */
+/*   Updated: 2019/10/30 02:08:53 by sbearded         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "rules.h"
+#include "push_swap.h"
 
-int		rule_sa(t_stack *a, int print)
+int	main(int argc, char **argv)
 {
-	if (print)
-		ft_putstr("sa\n");
-	return (stack_swap(a));
-}
+	t_stack	*a;
+	t_stack	*b;
+	t_sort	sort;
 
-int		rule_sb(t_stack *b, int print)
-{
-	if (print)
-		ft_putstr("sb\n");
-	return (stack_swap(b));
-}
-
-int		rule_ss(t_stack *a, t_stack *b, int print)
-{
-	if (print)
-		ft_putstr("ss\n");
-	return (stack_swap(a) & stack_swap(b));
+	if (argc == 1)
+		exit(1);
+	if (fill_stack(argc, argv, &a, &b) == 0)
+	{
+		ft_putendl_fd("Error", 2);
+		return (1);
+	}
+	fill_sort(a, b, &sort);
+	sort_f(&sort);
+	stack_deinit(&a);
+	stack_deinit(&b);
 }
