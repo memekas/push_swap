@@ -6,13 +6,13 @@
 /*   By: sbearded <sbearded@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/29 17:03:53 by sbearded          #+#    #+#             */
-/*   Updated: 2019/10/29 18:29:13 by sbearded         ###   ########.fr       */
+/*   Updated: 2019/10/29 18:47:28 by sbearded         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
 
-int		check_int(char *str, int *num)
+static int	check_int(char *str, int *num)
 {
 	char	*num_str;
 	int		res;
@@ -27,11 +27,11 @@ int		check_int(char *str, int *num)
 		return (0);
 }
 
-int		check_dup(t_int_stack *a, int num)
+static int	check_dup(t_stack *a, int num)
 {
 	int		i;
 	int		*arr;
-	
+
 	i = a->size;
 	arr = a->arr;
 	while (--i >= 0)
@@ -42,7 +42,7 @@ int		check_dup(t_int_stack *a, int num)
 	return (1);
 }
 
-int		fill_stack(int argc, char **argv, t_int_stack **a, t_int_stack **b)
+int			fill_stack(int argc, char **argv, t_stack **a, t_stack **b)
 {
 	int		num;
 	char	**str;

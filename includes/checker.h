@@ -6,7 +6,7 @@
 /*   By: sbearded <sbearded@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/29 16:02:46 by sbearded          #+#    #+#             */
-/*   Updated: 2019/10/29 17:36:22 by sbearded         ###   ########.fr       */
+/*   Updated: 2019/10/29 18:46:23 by sbearded         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,6 @@
 # include "stack.h"
 # include "rules.h"
 
-int		fill_stack(int argc, char **argv, t_int_stack **a, t_int_stack **b);
+int		fill_stack(int argc, char **argv, t_stack **a, t_stack **b);
 
 #endif

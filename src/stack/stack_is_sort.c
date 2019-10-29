@@ -6,13 +6,13 @@
 /*   By: sbearded <sbearded@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/29 18:34:51 by sbearded          #+#    #+#             */
-/*   Updated: 2019/10/29 18:34:51 by sbearded         ###   ########.fr       */
+/*   Updated: 2019/10/29 18:42:30 by sbearded         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stack.h"
 
-int	stack_is_sort(t_int_stack *a)
+int	stack_is_sort(t_stack *a)
 {
 	int	i;
 

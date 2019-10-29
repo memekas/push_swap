@@ -6,13 +6,13 @@
 /*   By: sbearded <sbearded@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/29 18:34:40 by sbearded          #+#    #+#             */
-/*   Updated: 2019/10/29 18:34:42 by sbearded         ###   ########.fr       */
+/*   Updated: 2019/10/29 18:42:30 by sbearded         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stack.h"
 
-t_int_stack	*stack_copy(t_int_stack **dst, t_int_stack *src)
+t_stack	*stack_copy(t_stack **dst, t_stack *src)
 {
 	*dst = stack_init();
 	ft_memdel((void**)&((*dst)->arr));

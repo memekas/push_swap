@@ -6,13 +6,13 @@
 /*   By: sbearded <sbearded@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/29 18:35:11 by sbearded          #+#    #+#             */
-/*   Updated: 2019/10/29 18:35:13 by sbearded         ###   ########.fr       */
+/*   Updated: 2019/10/29 18:42:30 by sbearded         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stack.h"
 
-int		stack_resize(t_int_stack *stack, unsigned int new_size)
+int		stack_resize(t_stack *stack, unsigned int new_size)
 {
 	int *temp;
 

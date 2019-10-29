@@ -6,17 +6,17 @@
 /*   By: sbearded <sbearded@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/29 18:34:34 by sbearded          #+#    #+#             */
-/*   Updated: 2019/10/29 18:34:35 by sbearded         ###   ########.fr       */
+/*   Updated: 2019/10/29 18:42:30 by sbearded         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stack.h"
 
-t_int_stack	*stack_init(void)
+t_stack	*stack_init(void)
 {
-	t_int_stack *ret;
+	t_stack *ret;
 
-	if ((ret = (t_int_stack*)ft_memalloc(sizeof(t_int_stack))) == NULL)
+	if ((ret = (t_stack*)ft_memalloc(sizeof(t_stack))) == NULL)
 	{
 		exit(-1);
 	}

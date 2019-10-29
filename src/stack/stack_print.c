@@ -6,13 +6,13 @@
 /*   By: sbearded <sbearded@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/29 18:34:55 by sbearded          #+#    #+#             */
-/*   Updated: 2019/10/29 18:34:56 by sbearded         ###   ########.fr       */
+/*   Updated: 2019/10/29 18:42:30 by sbearded         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stack.h"
 
-void	stack_print(t_int_stack stack)
+void	stack_print(t_stack stack)
 {
 	unsigned int i;
 

@@ -6,13 +6,13 @@
 /*   By: sbearded <sbearded@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/29 18:35:00 by sbearded          #+#    #+#             */
-/*   Updated: 2019/10/29 18:35:01 by sbearded         ###   ########.fr       */
+/*   Updated: 2019/10/29 18:42:30 by sbearded         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stack.h"
 
-int		stack_pull(t_int_stack *stack)
+int		stack_pull(t_stack *stack)
 {
 	int ret;
 
