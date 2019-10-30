@@ -6,7 +6,7 @@
 /*   By: sbearded <sbearded@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/29 22:38:46 by sbearded          #+#    #+#             */
-/*   Updated: 2019/10/30 02:05:33 by sbearded         ###   ########.fr       */
+/*   Updated: 2019/10/30 03:02:30 by sbearded         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,6 @@ void		check_move_b(t_stack *b, t_move *node, size_t i)
 	j = 0;
 	while ((int)(i - j) >= 0)
 		j++;
-	j++;
 	node->b_down = j;
 	if (node->b_up <= node->b_down)
 		node->direct_b = UP;

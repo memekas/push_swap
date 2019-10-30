@@ -6,7 +6,7 @@
 /*   By: sbearded <sbearded@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/29 21:54:48 by sbearded          #+#    #+#             */
-/*   Updated: 2019/10/30 02:11:59 by sbearded         ###   ########.fr       */
+/*   Updated: 2019/10/30 02:58:12 by sbearded         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ static void	end(t_sort *sort, t_move *node)
 	size_t	i;
 	int		*arr;
 
+	node->direct_a = 0;
 	stack = sort->a;
 	arr = sort->a->arr;
 	i = 0;
