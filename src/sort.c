@@ -6,7 +6,7 @@
 /*   By: sbearded <sbearded@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/29 21:54:48 by sbearded          #+#    #+#             */
-/*   Updated: 2019/10/30 02:58:12 by sbearded         ###   ########.fr       */
+/*   Updated: 2019/10/30 03:48:21 by sbearded         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ int			sort_f(t_sort *sort)
 	if (stack_is_sort(sort->a))
 		return (1);
 	pre_start(sort);
-	if (check_sort_round(sort))
+	if (check_sort_round(sort) == 0)
 	{
 		rule_pb(sort->a, sort->b, 1);
 		rule_ra(sort->a, 1);

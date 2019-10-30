@@ -6,7 +6,7 @@
 /*   By: sbearded <sbearded@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/29 22:07:35 by sbearded          #+#    #+#             */
-/*   Updated: 2019/10/29 22:23:45 by sbearded         ###   ########.fr       */
+/*   Updated: 2019/10/30 03:58:11 by sbearded         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@ int		check_sort_round(t_sort *sort)
 
 	arr = sort->a->arr;
 	i = sort->a->size;
-	while (--i > 1)
+	while (--i > 0)
 	{
-		if (arr[i] > arr[i - 1] && arr[i - 1] != sort->min
-											&& arr[i] != sort->max)
+		if (arr[i] > arr[i - 1] && (arr[i - 1] != sort->min
+											|| arr[i] != sort->max))
 			return (0);
 	}
 	return (1);
